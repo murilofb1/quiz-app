@@ -13,4 +13,11 @@
         android:gravity="center"
         android:text="SPLASH" />
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="match_parent"
+        android:id="@+id/img"
+        style=""
+        android:layout_height="match_parent"
+        android:src="@drawable/birthday_girl" />
+
 </androidx.appcompat.widget.LinearLayoutCompat>

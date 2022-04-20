@@ -7,12 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.bumptech.glide.Glide
 import com.example.perguntaserespostas.R
 import com.example.perguntaserespostas.databinding.FragmentSplashBinding
 import com.example.perguntaserespostas.helpers.NavigationHelper
 
-class SplashFragment : Fragment() {
+class LooseFragment : Fragment() {
     lateinit var binding: FragmentSplashBinding
     lateinit var nav: NavigationHelper.SplashNav
     override fun onCreateView(
@@ -22,7 +21,6 @@ class SplashFragment : Fragment() {
     ): View? {
         binding = FragmentSplashBinding.bind(inflateView(inflater, container))
         nav = NavigationHelper(requireActivity()).SplashNav()
-        Glide.with(requireContext()).load(R.drawable.birthday_girl).into(binding.img)
         Handler(Looper.getMainLooper()).postDelayed({
             nav.navigateToHome()
         }, 3000)

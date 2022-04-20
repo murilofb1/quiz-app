@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_main"
-    app:startDestination="@id/frag_home">
+    app:startDestination="@id/frag_splash">
 
     <fragment
         android:id="@+id/frag_splash"
@@ -11,7 +11,9 @@
         tools:layout="@layout/fragment_splash">
         <action
             android:id="@+id/splash_to_home"
-            app:destination="@id/frag_home" />
+            app:destination="@id/frag_home"
+            app:popUpTo="@id/frag_splash"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
@@ -28,11 +30,31 @@
         android:name="com.example.perguntaserespostas.fragments.QuestionFragment"
         tools:layout="@layout/fragment_question">
         <action
-            android:id="@+id/question_to_home"
-            app:destination="@id/frag_home" />
-        <action
-            android:id="@+id/reloadQuestion"
+            android:id="@+id/question_to_question"
             app:destination="@id/frag_question" />
+        <action
+            android:id="@+id/question_to_win"
+            app:destination="@id/frag_win" />
+        <action
+            android:id="@+id/question_to_loose"
+            app:destination="@id/frag_loose" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/frag_win"
+        android:name="com.example.perguntaserespostas.fragments.WinFragment">
+        <action
+            android:id="@+id/win_to_home"
+            app:destination="@id/frag_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/frag_loose"
+        android:name="com.example.perguntaserespostas.fragments.LooseFragment">
+
+        <action
+            android:id="@+id/loose_to_home"
+            app:destination="@id/frag_home" />
     </fragment>
 
 </navigation>
