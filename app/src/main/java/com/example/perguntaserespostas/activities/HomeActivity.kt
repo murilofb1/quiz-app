@@ -1,8 +1,9 @@
-package com.example.perguntaserespostas
+package com.example.perguntaserespostas.activities
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.perguntaserespostas.helpers.PointsUtil
 import com.example.perguntaserespostas.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {

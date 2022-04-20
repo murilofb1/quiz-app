@@ -1,4 +1,4 @@
-package com.example.perguntaserespostas
+package com.example.perguntaserespostas.helpers
 
 class PointsUtil {
     companion object {

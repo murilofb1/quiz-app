@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/muril/OneDrive/Programacao/AndroidProjects/PerguntaseRespostas/app/src/main/res/layout/activityMain.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/muril/OneDrive/Programacao/AndroidProjects/PerguntaseRespostas/app/src/main/res/layout/activity_home.xml" value="0.6" />
         <entry key="..\:/Users/muril/OneDrive/Programacao/AndroidProjects/PerguntaseRespostas/app/src/main/res/layout/activity_main.xml" value="0.15989583333333332" />
         <entry key="..\:/Users/muril/OneDrive/Programacao/AndroidProjects/PerguntaseRespostas/app/src/main/res/layout/activity_questions.xml" value="0.1" />
+        <entry key="..\:/Users/muril/OneDrive/Programacao/AndroidProjects/PerguntaseRespostas/app/src/main/res/layout/fragment_home.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/muril/OneDrive/Programacao/AndroidProjects/PerguntaseRespostas/app/src/main/res/layout/fragment_question.xml" value="0.17447916666666666" />
+        <entry key="..\:/Users/muril/OneDrive/Programacao/AndroidProjects/PerguntaseRespostas/app/src/main/res/layout/fragment_splash.xml" value="0.19895833333333332" />
       </map>
     </option>
   </component>

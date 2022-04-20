@@ -1,8 +1,11 @@
-package com.example.perguntaserespostas
+package com.example.perguntaserespostas.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.perguntaserespostas.models.QuestionModel
+import com.example.perguntaserespostas.R
 import com.example.perguntaserespostas.databinding.ActivityQuestionsBinding
+import com.example.perguntaserespostas.fragments.QuestionFragment
 
 class QuestionsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityQuestionsBinding
@@ -17,7 +20,7 @@ class QuestionsActivity : AppCompatActivity() {
 
     fun fragmentTransaction() {
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.frag_container, QuestionFragment(question))
+        transaction.replace(R.id.frag_container, QuestionFragment(/* question */))
         transaction.commit()
     }
 

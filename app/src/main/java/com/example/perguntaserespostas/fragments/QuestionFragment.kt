@@ -1,18 +1,19 @@
-package com.example.perguntaserespostas
+package com.example.perguntaserespostas.fragments
 
 import android.content.DialogInterface
-import android.opengl.Visibility
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.get
 import androidx.fragment.app.Fragment
+import com.example.perguntaserespostas.helpers.PointsUtil
+import com.example.perguntaserespostas.models.QuestionModel
+import com.example.perguntaserespostas.activities.QuestionsActivity
+import com.example.perguntaserespostas.R
 import com.example.perguntaserespostas.databinding.FragmentQuestionBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
-class QuestionFragment(val question: QuestionModel) : Fragment() {
+class QuestionFragment(/* private val question: QuestionModel */) : Fragment() {
     private lateinit var binding: FragmentQuestionBinding
     var answerRevealed = false
 
@@ -21,13 +22,8 @@ class QuestionFragment(val question: QuestionModel) : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentQuestionBinding.bind(
-            inflater.inflate(
-                R.layout.fragment_question,
-                container,
-                false
-            ),
-        )
+        binding = FragmentQuestionBinding.bind(inflateLayout(inflater, container))
+/*
         question.shuffleAnswers()
         binding.txtViewTitle.text = question.title
         binding.radioAlternative1.text = question.alternatives[0]
@@ -78,10 +74,16 @@ class QuestionFragment(val question: QuestionModel) : Fragment() {
             dialog.show()
             answerRevealed = true
         }
+
+ */
         return binding.root
     }
 
-    fun getCheckedRadioButton(): Int {
+    private fun inflateLayout(inflater: LayoutInflater, container: ViewGroup?): View {
+        return inflater.inflate(R.layout.fragment_question, container, false)
+    }
+
+    private fun getCheckedRadioButton(): Int {
         return when {
             binding.radioAlternative1.isChecked -> 0
             binding.radioAlternative2.isChecked -> 1
